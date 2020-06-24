@@ -79,8 +79,8 @@ def denormalize(data, mins, scales):
     return data
   return res
 
-# split data by window
-def split_data(data, window_size):
+# split data by sliding window
+def sliding_window_split(data, window_size):
     X = np.zeros((len(data) - window_size, window_size, 1))
     y = np.zeros((len(data) - window_size, 1))
     for i in range(0, len(data) - window_size):
@@ -98,8 +98,8 @@ def add_figure(figs, axes):
   return figs, axes, fig, ax
 
 # set up data path and training constants
-#data_path = "data/OBS_ASOS_DD_19040409-20200609.csv"
-data_path = "/content/snu2020-thesis/data/OBS_ASOS_DD_19040409-20200609.csv"
+#data_path = "data/OBS_ASOS_DD_19071001-20200609.csv"
+data_path = "/content/snu2020-thesis/data/OBS_ASOS_DD_19071001-20200609.csv"
 train_ratio = 0.5 # ratio of training
 window_size = 30 # sliding window size(day)
 num_epochs = 10 # number of epoches
@@ -107,8 +107,8 @@ num_epochs = 10 # number of epoches
 # read data and preparation
 data_raw = pd.read_csv(data_path) # read csv raw data
 data_raw = data_raw.fillna(0) # fill NaN 0
-#data_raw = data_raw.iloc[:,1:2] # use only AvgTemp
-data_raw = data_raw.iloc[:,2:3] # use only LowTemp
+data_raw = data_raw.iloc[:,1:2] # use only AvgTemp
+#data_raw = data_raw.iloc[:,2:3] # use only LowTemp
 #data_raw = data_raw.iloc[:,3:4] # use only HighTemp
 #data_raw = data_raw.iloc[:,4:5] # use only Precipitation
 data_raw = data_raw.to_numpy() # convert to numpy
@@ -122,10 +122,10 @@ test_set = data[int(data.shape[0] * (1-train_ratio)):data.shape[0],:]
 test_set_raw = data_raw[int(data.shape[0] * (1-train_ratio)):data.shape[0],:]
 
 # split data into window size
-X_train, y_train = split_data(train_set, window_size)
-X_train_raw, y_train_raw = split_data(train_set_raw, window_size)
-X_test, y_test = split_data(test_set, window_size)
-X_test_raw, y_test_raw = split_data(test_set_raw, window_size)
+X_train, y_train = sliding_window_split(train_set, window_size)
+X_train_raw, y_train_raw = sliding_window_split(train_set_raw, window_size)
+X_test, y_test = sliding_window_split(test_set, window_size)
+X_test_raw, y_test_raw = sliding_window_split(test_set_raw, window_size)
 
 # LSTM model
 model = models.Sequential([

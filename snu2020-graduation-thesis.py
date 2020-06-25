@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1NFl4BBiO5IN76FFkFeHKbLa9JLxrh6oz
 
 # The Weather Sensory Data Prediction based on LSTM
-2011-13330 SNU CLS Seokmo-Yoo \\
+2011-13330 SNU CLS Seokmo-Yoo
 
 1. Load prepared data from Google Drive
 """
@@ -147,14 +147,14 @@ y_pred_final = denormalize(y_pred, mins, scales).reshape((-1))
 y_train_final = denormalize(y_train, mins, scales).reshape((-1))
 y_test_final = denormalize(y_test, mins, scales).reshape((-1))
 
-# MSE and R squared information
+# MSE and R squared error
 MSE = mean_squared_error(y_test_raw, y_pred_final)
 R_squared = r2_score(y_test_raw, y_pred_final)
 print("MSE: %.6f" % MSE)
 print("R_squared: %.6f" % R_squared)
 
 # draw figures
-sup_title = "Average Temperature"
+sup_title = "Daily Precipitation"
 figs, axes, fig, ax = add_figure([], [])
 fig.suptitle(sup_title, fontsize=16, y=0.96)
 ax.set_title("Test data(%d days)" % (y_test.shape[0]))

@@ -7,11 +7,11 @@ The Weather Sensory Data Prediction based on LSTM
 Based on Long Short Term Memory(Sepp Hochreiter et al. 1997), which is effective model to predict time series data, I developed a simple prediction model of temperature and precipitation in weather sensory data. After training the model by observed data, I compared the result with the real data and analyzed the error of the result by numerical methods to discuss about accuracy.
 
 ## Methodology
-Check out `snu2020-graduation-thesis.ipynb` for detail.
+Check out [snu2020-graduation-thesis.ipynb](snu2020-graduation-thesis.ipynb) for detail.
 - using Tensorflow Keras in Python 3
 
 ## Data
-Check out `data/OBS_ASOS_DD_19071001-20200609.csv` for detail.
+Check out [data/OBS_ASOS_DD_19071001-20200609.csv](data/OBS_ASOS_DD_19071001-20200609.csv) for detail.
 - Source: https://data.kma.go.kr/cmmn/main.do, Open Weather Data Portal, accessed on 2020-06-10.
 - Record: ASOS/Daily/Average, Minimum, Maximum Temperature(degree Celcius) and Daily Precipitation(mm/day)
 - Range: 1907-07-01 to 2020-06-09 except 1950-01-01 to 1953-12-31 due to Korean War

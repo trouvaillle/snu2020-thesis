@@ -16,6 +16,8 @@ Check out `snu2020-graduation-thesis.ipynb` for detail.
 
 ## Result
 ### Average Temperature
+`Accuracy: MSE 3.1986, R^2 0.9706`
+
 - Total test set
 <img src="figs/avgtmp_whole.png">
 
@@ -29,6 +31,7 @@ Check out `snu2020-graduation-thesis.ipynb` for detail.
 <img src="figs/avgtmp_scatter.png">
 
 ### Minimum Temperature
+`Accuracy: MSE 3.7829, R^2 0.9656`
 - Total test set
 <img src="figs/mintmp_whole.png">
 
@@ -42,6 +45,7 @@ Check out `snu2020-graduation-thesis.ipynb` for detail.
 <img src="figs/mintmp_scatter.png">
 
 ### Maximum Temperature
+`Accuracy: MSE 5.3571, R^2 0.9530`
 - Total test set
 <img src="figs/maxtmp_whole.png">
 
@@ -55,6 +59,7 @@ Check out `snu2020-graduation-thesis.ipynb` for detail.
 <img src="figs/maxtmp_scatter.png">
 
 ### Daily Precipitation
+`Accuracy: MSE 181.0255, R^2 0.1642`
 - Total test set
 <img src="figs/preci_whole.png">
 

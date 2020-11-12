@@ -11,6 +11,7 @@ Check out `snu2020-graduation-thesis.ipynb` for detail.
 - using Tensorflow Keras in Python 3
 
 ## Data
+Check out `data/OBS_ASOS_DD_19071001-20200609.csv` for detail.
 - Source: https://data.kma.go.kr/cmmn/main.do, Open Weather Data Portal, accessed on 2020-06-10.
 - Record: ASOS/Daily/Average, Minimum, Maximum Temperature(degree Celcius) and Daily Precipitation(mm/day)
 - Range: 1907-07-01 to 2020-06-09 except 1950-01-01 to 1953-12-31 due to Korean War

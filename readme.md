@@ -13,8 +13,10 @@ Check out `snu2020-graduation-thesis.ipynb` for detail.
 ## Model
 <img src="figs/model.png">
 
+- Normalize to [-1, 1]
 - LSTM Layer(Unit: 100)
 - Dense Layer(Unit: 1)
+- Denormalize 
 
 ## Result
 ### Average Temperature

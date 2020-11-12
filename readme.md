@@ -4,7 +4,7 @@ The Weather Sensory Data Prediction based on LSTM
 
 2011-13330 SNU CLS Seokmo-Yoo, August 2020.
 
-Based on Long Short Term Memory(Sepp Hochreiter et al. 1997), which is effective model to predict time series data, I developed a simple prediction model of temperature and precipitation in weather sensory data. After training the model by observed data, I compared the result with the real data and analyzed the error of the result by numerical methods to discuss about accuracy.
+Based on [Long Short Term Memory(Sepp Hochreiter et al. 1997)](https://www.mitpressjournals.org/doi/abs/10.1162/neco.1997.9.8.1735), which is effective model to predict time series data, I developed a simple prediction model of temperature and precipitation in weather sensory data. After training the model by observed data, I compared the result with the real data and analyzed the error of the result by numerical methods to discuss about accuracy.
 
 ## Methodology
 Check out [snu2020-graduation-thesis.ipynb](snu2020-graduation-thesis.ipynb) for detail.
